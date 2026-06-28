@@ -4,7 +4,7 @@
     return;
   }
   window.__mdccContentLoaded = true;
-  window.__mdccVersion = "2.9.8";
+  window.__mdccVersion = "2.9.9";
   document.documentElement.dataset.mdccVersion = window.__mdccVersion;
 
   const TOOL_CLASS = "mdcc-inline-tools";
@@ -1084,15 +1084,16 @@
   function isClearlyMissingContent(sourceText, normalizedText) {
     const source = cleanText(sourceText || "");
     const normalized = cleanText(normalizedText || "");
-    if (source.length < 40) return false;
+    if (source.length < 80) return false;
     if (!normalized) return true;
-    if (normalized.length < source.length * 0.72) return true;
-    const sourceLines = source.split(/\n+/).map((line) => line.trim()).filter((line) => line.length > 12);
+    if (normalized.length < source.length * 0.55) return true;
+    const sourceLines = source.split(/\n+/).map((line) => line.trim()).filter((line) => line.length > 24);
     const normalizedFlat = normalized.replace(/\s+/g, " ");
-    return sourceLines.some((line) => {
-      const probe = line.replace(/\s+/g, " ").slice(0, 32);
-      return probe.length > 16 && !normalizedFlat.includes(probe);
+    const missingLines = sourceLines.filter((line) => {
+      const probe = line.replace(/\s+/g, " ").slice(0, 40);
+      return probe.length > 24 && !normalizedFlat.includes(probe);
     });
+    return missingLines.length >= 2 && missingLines.length / sourceLines.length > 0.35;
   }
 
   function normalizeMathText(text) {

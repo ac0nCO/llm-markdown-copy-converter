@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "LLM Markdown Copy Converter",
-  "version": "2.9.8",
+  "version": "2.9.9",
   "description": "Convert LLM Markdown replies into Word-friendly rich text or clean chat text.",
   "action": {
     "default_popup": "popup.html",

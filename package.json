@@ -1,6 +1,6 @@
 {
   "name": "llm-markdown-copy-converter",
-  "version": "2.9.8",
+  "version": "2.9.9",
   "private": true,
   "description": "A local Chrome/Edge extension for copying LLM Markdown replies as Word-friendly rich text or clean chat text.",
   "type": "module",

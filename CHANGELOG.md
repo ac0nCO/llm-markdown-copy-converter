@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.9.9
+
+- Tightened the rich-copy fallback trigger so inline `Word` copy keeps the same rich formatting path as popup copy in normal cases.
+- Kept the source-text fallback only for obvious large content loss, instead of switching too eagerly to plain-text reconstruction.
+
 ## 2.9.8
 
 - Fixed a case where Word copy could drop visible text around small formula fragments.
