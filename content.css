@@ -1,0 +1,94 @@
+.mdcc-inline-tools {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.mdcc-copy-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0;
+  height: 32px;
+  border: 1px solid #cfd6e4;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: #ffffff;
+  color: #1f2937;
+  font: 14px/1 "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: none;
+  appearance: none;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.mdcc-gemini-tools {
+  gap: 4px;
+  margin-left: 6px;
+  transform: translateY(0);
+  flex: 0 0 auto !important;
+  align-self: center !important;
+}
+
+.mdcc-gemini-tools .mdcc-copy-btn {
+  height: 32px;
+  min-width: 48px;
+  padding: 0 10px;
+  border-color: #cfd6e4;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: none;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.mdcc-copy-btn:hover {
+  background: #f8fafc;
+  border-color: #b8c2d4;
+  color: #111827;
+}
+
+.mdcc-copy-btn:active {
+  transform: translateY(1px);
+}
+
+.mdcc-toast {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483647;
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: rgba(15, 23, 42, 0.94);
+  color: white;
+  font: 13px/1.4 "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
+}
+
+.mdcc-tooltip {
+  position: absolute;
+  z-index: 2147483647;
+  max-width: 220px;
+  border-radius: 8px;
+  padding: 7px 10px;
+  background: #171717;
+  color: #ffffff;
+  font: 600 13px/1.35 "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+
+.mdcc-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  background: #171717;
+  transform: translateX(-50%) rotate(45deg);
+}

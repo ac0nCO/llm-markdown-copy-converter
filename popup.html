@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Markdown Copy Converter</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <section class="toolbar" aria-label="复制方式">
+        <button id="copyRich" type="button" title="复制为 Word 可识别的富文本">
+          <span aria-hidden="true">W</span>
+          <span>复制到 Word</span>
+        </button>
+        <button id="copyPlain" type="button" title="复制为微信等聊天软件更干净的文本">
+          <span aria-hidden="true">T</span>
+          <span>复制到聊天</span>
+        </button>
+        <button id="clear" class="icon" type="button" title="清空">×</button>
+      </section>
+
+      <textarea id="source" spellcheck="false" placeholder="把大模型回复粘贴到这里..."></textarea>
+
+      <section class="previewWrap" aria-label="预览">
+        <div class="previewHeader">
+          <span>预览</span>
+          <span id="status" role="status"></span>
+        </div>
+        <article id="preview" class="preview"></article>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
